@@ -1697,7 +1697,7 @@ def LINE_OP_TYPE(op):
                                     if Connect_to["AutojoinTicket"] == True:
                                         group=client.findGroupByTicket(ticket_id)
                                         client.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                        client.sendText(send,"Success Masuk %s" % str(group.name))
+                                        client.sendText(send,"SELFBOT-BY:MAX %s" % str(group.name))
 
                         elif msgText in ["Copy on"]:
                             if man in Team or man in Connect_to["Admin"]:
