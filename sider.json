@@ -1,7 +1,7 @@
 {
     "Admin": {
-        "ud296655acef67cbd5e8208e63629f78b": true,
-        "u65224f4e8812136f01b25275a54b5aef": true
+        "uafd65893655c791f07c9ff31cbbc28d1": true,
+        "u4862fe4b182b2fd194a3108e2f3662e8": true
     },
     "AdminDel": false,
     "Adminadd": false,
@@ -13,7 +13,7 @@
     "Contact": false,
     "ContactAdd": {},
     "Copy": false,
-    "GName": "ARIFISTIFIK",
+    "GName": "SELFBOT-BY:MAX",
     "Gift": false,
     "IDSticker": false,
     "Invite": false,
@@ -32,21 +32,21 @@
     "Upfoto": false,
     "UpfotoGroup": false,
     "WcText": "Welcome My Friend",
-    "Welcome": false,
+    "Welcome": true,
     "WvText": "See You My Friend",
     "autoAdd": true,
-    "autoBlock": false,
-    "autoJoin": false,
+    "autoBlock": true,
+    "autoJoin": true,
     "autoRead": false,
-    "detectMention": false,
+    "detectMention": true,
     "kickMention": false,
     "readMember": {
-        "ud296655acef67cbd5e8208e63629f78b": ""
+        "uafd65893655c791f07c9ff31cbbc28d1": ""
     },
     "readPoint": {
-        "ud296655acef67cbd5e8208e63629f78b": "8178036848553"
+        "uafd65893655c791f07c9ff31cbbc28d1": "8178036848553"
     },
     "readTime": {
-        "ud296655acef67cbd5e8208e63629f78b": "19:02:54"
+        "uafd65893655c791f07c9ff31cbbc28d1": "19:02:54"
     }
 }
