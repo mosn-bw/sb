@@ -8,7 +8,7 @@ from multiprocessing import Pool, Process
 from ffmpy import FFmpeg
 import time, random, asyncio, timeit, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, urllib, urllib.parse, ast, pytz, wikipedia, pafy, youtube_dl, atexit
 
-print ("\nSELAMAT DATANG\n")
+print ("\nBY: SELFBOT-BY:MAX\n")
 
 client = LINE()
 #client = LINE(authToken="YOUR TOKEN")
@@ -25,7 +25,7 @@ call = client
 mid = [client]
 myMID = client.profile.mid
 Admin=[myMID]
-Owner=["ud296655acef67cbd5e8208e63629f78b"]
+Owner=["uafd65893655c791f07c9ff31cbbc28d1"]
 Team = Admin + mid + Owner
 
 contact = client.getProfile()
@@ -39,8 +39,8 @@ Connect_to = {
     "SpamInvite":False,
     "limit": 5,
     "Contact":False,
-    "GName":"Arifistifik",
-    "AutoRespon":False,
+    "GName":"SELFBOT-BY:MAX",
+    "AutoRespon":True,
     "KickRespon":False,
     "KillOn":False,
     "KickOn":False,
@@ -53,17 +53,17 @@ Connect_to = {
     "autoAdd":True,
     "PesanAdd":"Terima Kasih Sudah Add Saya",
     "ContactAdd":{},
-    "autoBlock":False,
+    "autoBlock":True,
     "autoJoin":True,
-    "AutojoinTicket":False,
+    "AutojoinTicket":True,
     "AutoReject":False,
     "autoRead":False,
     "IDSticker":False,
     "Timeline":False,
-    "Welcome":False,
+    "Welcome":True,
     "BackupBot":True,
     "WcText": "Welcome My Friend",
-    "Leave":False,
+    "Leave":True,
     "LvText": "See You My Friend",
     "Mic":False,
     "MicDel":False,
@@ -77,9 +77,9 @@ Connect_to = {
     "Blacklist":{},
     "Ban":False,
     "Unban":False,
-    "comment": "autolike by arif",
+    "comment": "autolike by SELFBOT-BY:MAX",
     "Admin": {
-        "ud296655acef67cbd5e8208e63629f78b":True #MID ADMIN TARO DISINI
+        "uafd65893655c791f07c9ff31cbbc28d1":True #MID ADMIN TARO DISINI
     },
 }
 
@@ -886,7 +886,7 @@ def LINE_OP_TYPE(op):
                         elif msgText.lower() == "me":
                             if man in Team or man in Connect_to["Admin"]:
                                 client.sendMessage(send, None, contentMetadata={'mid': man}, contentType=13)
-                                client.arifistifik(send,man," Hay","")
+                                #client.arifistifik(send,man,"Hai","")
 
                         elif msgText.lower() == "help":
                             if man in Team or man in Connect_to["Admin"]:
@@ -911,7 +911,7 @@ def LINE_OP_TYPE(op):
                         elif msgText.lower() == "speed":
                             if man in Team or man in Connect_to["Admin"]:
                                 no = time.time()
-                                client.sendText("u5cddc1ed7ed83dd61226e5bd229b0ccb", ' ')
+                                client.sendText("uafd65893655c791f07c9ff31cbbc28d1", ' ')
                                 elapsed_time = time.time() - no
                                 client.sendText(send, "%s" % (elapsed_time))
 
@@ -934,7 +934,7 @@ def LINE_OP_TYPE(op):
                                     wi = wi + 1
                                     end = '\n'
                                     dpk_ += str(wi) + ". " +client.getContact(m_id).displayName + "\n"
-                                client.sendText(send,"Team\n\nOwner:\n"+msg+"\nAdmin:\n"+dpk_+"\n( %s ) TEAM DPK" %(str(len(Owner)+len(Connect_to["Admin"]))))                                
+                                client.sendText(send,"Team\n\nOwner:\n"+msg+"\nAdmin:\n"+dpk_+"\n( %s ) TEAM SELFBOT-BY:MAX" %(str(len(Owner)+len(Connect_to["Admin"]))))                                
 
                         elif msgText.lower() == "leaveall grup":
                             if man in Team or man in Connect_to["Admin"]:
@@ -968,7 +968,7 @@ def LINE_OP_TYPE(op):
                                         for target in targets:
                                           if target not in Team and target not in Connect_to["Admin"]:
                                             try:
-                                                klist=[cl]
+                                                klist=[client]
                                                 kicker=random.choice(klist)
                                                 kicker.kickoutFromGroup(send,[target])
                                             except Exception as error:
@@ -1478,7 +1478,7 @@ def LINE_OP_TYPE(op):
                                 cll = client.getProfile()
                                 cll.displayName = change
                                 client.updateProfile(cll)
-                                owner = "uc721ad1f11fb7e128453ba5a27424998"
+                                owner = "uafd65893655c791f07c9ff31cbbc28d1"
                                 client.arifistifik(send,owner," Update Name Success","\n Change to " + str(change))
 
                         elif msgText.lower().startswith("changebio: "):
@@ -1523,7 +1523,7 @@ def LINE_OP_TYPE(op):
                                         pass
                                     else:
                                         try:
-                                            klist=[cl]
+                                            klist=[client]
                                             kicker=random.choice(klist)
                                             kicker.kickoutFromGroup(send,[target])
                                             Connect_to["Blacklist"][target] = True
@@ -1555,34 +1555,34 @@ def LINE_OP_TYPE(op):
                         elif msgText.lower() == 'status':
                             if man in Team or man in Connect_to["Admin"]:
                                 try:
-                                    hasil = "╭──────────────"
-                                    if Connect_to["autoAdd"] == True: hasil += "\n│Auto Add ( on )"
-                                    else: hasil += "\n│Auto Add ( off )"
-                                    if Connect_to["autoJoin"] == True: hasil += "\n│Auto Join ( on )"
-                                    else: hasil += "\n│Auto Join ( off )"
-                                    if Connect_to["AutoReject"] == True: hasil += "\n│Auto Reject Room ( on )"
-                                    else: hasil += "\n│Auto Reject Room ( off )"
-                                    if Connect_to["AutojoinTicket"] == True: hasil += "\n│Auto Join Ticket ( on )"
-                                    else: hasil += "\n│Auto Join Ticket ( off )"
-                                    if Connect_to["autoRead"] == True: hasil += "\n│Auto Read ( on )"
-                                    else: hasil += "\n│Auto Read ( off )"
-                                    if Connect_to["AutoRespon"] == True: hasil += "\n│Detect Mention ( on )"
-                                    else: hasil += "\n│Detect Mention ( off )"
-                                    if Connect_to["KickRespon"] == True: hasil += "\n│Detect Mention ( on )"
-                                    else: hasil += "\n│Detect Kick Mention ( off )"
-                                    if Connect_to["Contact"] == True: hasil += "\n│Check Contact ( on )"
-                                    else: hasil += "\n│Check Contact ( off )"
-                                    if Connect_to["Timeline"] == True: hasil += "\n│Check Post Timeline ( on )"
-                                    else: hasil += "\n│Check Post ( off )"
-                                    if Connect_to["IDSticker"] == True: hasil += "\n│Check Sticker ( on )"
-                                    else: hasil += "\n│Check Sticker ( off )"
-                                    if Connect_to["UnsendMessage"] == True: hasil += "\n│Unsend Message ( on )"
-                                    else: hasil += "\n│Unsend Message ( off )"
-                                    if Connect_to["KickOn"] == True: hasil += "\n│Kick All Member ( on )"
-                                    else: hasil += "\n│Kick All Member ( off )"
-                                    if Connect_to["SpamInvite"] == True: hasil += "\n│Spam contact ( on )"
-                                    else: hasil += "\n│Spam Contact ( off )"
-                                    hasil += "\n╰──────────────"
+                                    hasil = "╭───────────"
+                                    if Connect_to["autoAdd"] == True: hasil += "\n│✅ Auto Add ( on )"
+                                    else: hasil += "\n│❌ Auto Add ( off )"
+                                    if Connect_to["autoJoin"] == True: hasil += "\n│✅ Auto Join ( on )"
+                                    else: hasil += "\n│❌ Auto Join ( off )"
+                                    if Connect_to["AutoReject"] == True: hasil += "\n│✅ Auto Reject Room ( on )"
+                                    else: hasil += "\n│❌ Auto Reject Room ( off )"
+                                    if Connect_to["AutojoinTicket"] == True: hasil += "\n│✅ Auto Join Ticket ( on )"
+                                    else: hasil += "\n│❌ Auto Join Ticket ( off )"
+                                    if Connect_to["autoRead"] == True: hasil += "\n│✅ Auto Read ( on )"
+                                    else: hasil += "\n│❌ Auto Read ( off )"
+                                    if Connect_to["AutoRespon"] == True: hasil += "\n│✅ Detect Mention ( on )"
+                                    else: hasil += "\n│❌ Detect Mention ( off )"
+                                    if Connect_to["KickRespon"] == True: hasil += "\n│✅ Detect Mention ( on )"
+                                    else: hasil += "\n│❌ Detect Kick Mention ( off )"
+                                    if Connect_to["Contact"] == True: hasil += "\n│✅ Check Contact ( on )"
+                                    else: hasil += "\n│❌ Check Contact ( off )"
+                                    if Connect_to["Timeline"] == True: hasil += "\n│✅ Check Post Timeline ( on )"
+                                    else: hasil += "\n│❌ Check Post ( off )"
+                                    if Connect_to["IDSticker"] == True: hasil += "\n│✅ Check Sticker ( on )"
+                                    else: hasil += "\n│❌ Check Sticker ( off )"
+                                    if Connect_to["UnsendMessage"] == True: hasil += "\n│✅ Unsend Message ( on )"
+                                    else: hasil += "\n│❌ Unsend Message ( off )"
+                                    if Connect_to["KickOn"] == True: hasil += "\n│✅ Kick All Member ( on )"
+                                    else: hasil += "\n│❌ Kick All Member ( off )"
+                                    if Connect_to["SpamInvite"] == True: hasil += "\n│✅ Spam contact ( on )"
+                                    else: hasil += "\n│❌ Spam Contact ( off )"
+                                    hasil += "\n╰───────────"
                                     client.sendMessage(send, str(hasil))
                                 except Exception as error:
                                     client.sendMessage(send, str(error))
