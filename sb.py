@@ -305,7 +305,7 @@ def LINE_OP_TYPE(op):
             if myMID in op.param3:
               if Connect_to['autoJoin'] == True:
                     client.acceptGroupInvitation(op.param1)
-                    print ("ANDA JOIN DI GRUP")
+                    print ("SELFBOT-BY:MAX JOIN GRUP")
                     pass
 
         if op.type == 13:
@@ -850,9 +850,9 @@ def LINE_OP_TYPE(op):
                         for target in targets:
                             try:
                                 client.findAndAddContactsByMid(target)
-                                client.createGroup("ELU DISPAM GOBLOK",[target]) 
-                                client.createGroup("ELU DISPAM GOBLOK",[target]) 
-                                client.createGroup("ELU DISPAM GOBLOK",[target])
+                                client.createGroup("SELFBOT-BY:MAX",[target]) 
+                                client.createGroup("SELFBOT-BY:MAX",[target]) 
+                                client.createGroup("SELFBOT-BY:MAX",[target])
                                 client.sendText(send,"Spam Invite ke " + korban + "\nSUCCESS..")
                                 Connect_to['SpamInvite'] = False
                             except:             
@@ -981,13 +981,13 @@ def LINE_OP_TYPE(op):
                                 teks = msgText.replace("Spam "+str(txt[1])+" "+str(jmlh)+" ","")
                                 tulisan = jmlh * (teks+"\n")
                                 if txt[1] == "on":
-                                    if jmlh <= 500:
+                                    if jmlh <= 5000:
                                        for x in range(jmlh):
                                            client.sendText(send, teks)
                                     else:
                                        client.sendText(send, "Maksimal 500 SpamTeks!")
                                 elif txt[1] == "off":
-                                    if jmlh <= 500:
+                                    if jmlh <= 5000:
                                         client.sendText(send, tulisan)
                                     else:
                                         client.sendText(send, "Maksimal 500 SpamTeks!")
